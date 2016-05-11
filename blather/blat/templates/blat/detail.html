@@ -1,0 +1,14 @@
+{% extends 'blat/master.html' %}
+
+{% block title %}
+    Blat Details
+{% endblock title %}
+
+{% block content %}
+    <dt>{{ blat.text }}</dt>
+    <dd>{{ blat.created_on }}</dd>
+    {% if blat.via %}
+        <a href='{{ blat.via }}'>/via</a></dd>
+    {% endif %}
+    
+{% endblock content %}
